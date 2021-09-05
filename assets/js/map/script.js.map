@@ -1,0 +1,1 @@
+{"version":3,"sources":["script.js"],"names":["jQuery","$","toggleClass"],"mappings":";;AAAAA,MAAM,CAAC,UAASC,CAAT,EAAW;AACdA,EAAAA,CAAC,CAAC,GAAD,CAAD,CAAOC,WAAP,CAAmB,WAAnB;AACH,CAFK,CAAN","sourcesContent":["jQuery(function($){\n    $('p').toggleClass('is-active');\n})"],"file":"script.js"}
