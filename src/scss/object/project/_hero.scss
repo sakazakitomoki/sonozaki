@@ -1,0 +1,279 @@
+.p-hero{
+    height: calc(100vh - 56px);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    @include mq(tab){
+        height: calc(100vh - 80px);
+    }
+
+    @keyframes anime {
+        0%{
+            opacity: 0;
+        }
+        33% {
+            opacity: 1;
+        }
+        66% {
+            opacity: 0;
+            transform: scale(1.1) ;
+            z-index:9;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+
+    &__sp-bg{
+        width: 100%;
+        height: calc(100vh - 56px);
+        z-index: 10;
+        opacity: 0;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation: anime 21s 0s infinite;
+
+        @include mq(pc){
+            display: none;
+        }
+
+        &:nth-of-type(2){
+            animation-delay: 7s;
+        }
+
+        &:nth-of-type(3){
+            animation-delay: 14s;
+        }
+    }
+
+    &__pc-bg{
+        display: none;
+
+        @include mq(pc){
+            width: 100%;
+            height: calc(100vh - 80px);
+            display: block;
+            z-index: 10;
+            opacity: 0;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: anime 21s 0s infinite; 
+        }
+
+        &:nth-of-type(5){
+            animation-delay: 7s;
+        }
+
+        &:nth-of-type(6){
+            animation-delay: 14s;
+        }
+    }
+    
+    &__wrap{
+        width: 1056px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 100%;
+        position: relative;
+        z-index: 20;
+    }
+
+    &__inner{
+        height: 100%;
+        position: relative;
+    }
+
+    &__head{
+        position: absolute;
+        top: 10%;
+        left: 20px;
+
+        @include mq(pc){
+            left: calc(50% - 508px);
+        }
+    }
+
+    &__title{
+        font-size: 4.8rem;
+        font-family: $en_font;
+        font-weight: $top;
+        color: #fff;
+        line-height: (58 / 48);
+        letter-spacing: 0.96px;
+        text-shadow: 4.2px 4.2px 4px rgba(24, 40, 72, 0.5);
+
+        @include mq(tab){
+            font-size: calc(4.8rem + ((1vw - 7.68px) * 16.6667));
+            min-height: 0vw;
+        }
+
+        @include mq(pc){
+            font-size: 9.6rem;
+        }
+    }
+
+    &__text-inner{
+        margin-top: 32px;
+    }
+
+    &__text{
+        display: block;
+        filter: drop-shadow(3px 2px $navy);
+
+        span{
+            display: inline-block;
+            font-size: 2rem;
+            padding: 0.8rem 2.5rem;
+            background-color: #fff;
+            clip-path: polygon(20px 0, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
+
+            @include mq(tab){
+                font-size: calc(2rem + ((1vw - 7.68px) * 4.1667));
+                min-height: 0vw;
+            }
+
+            @include mq(pc){
+                font-size: 3.2rem;
+                padding: 1.6rem 5.4rem;
+            }
+        }
+
+        &:not(:first-child){
+            margin-top: 14px;
+        }
+    }
+
+    &__body{
+        position: absolute;
+        bottom: 26px;
+        left: 20px;
+
+        @include mq(pc){
+            display: flex;
+            height: 64px;
+            width: 100%;
+            left: calc(50% - 508px);
+        }
+    }
+
+    &__top{
+        display: block;
+        width: 74px;
+        padding: 6px 22px 6px 13px;
+        background-color: $navy;
+        color: #fff;
+        font-family: $en_font;
+        font-size: 1.4rem;
+        clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0 100%);
+
+        @include mq(pc){
+            padding: 0 0 0 41px;
+            line-height: 64px;
+            flex: 0 1 175px;
+            clip-path: polygon(0 0, 100% 0, calc(100% - 50px) 100%, 0 100%);
+        }
+    }
+
+    &__middle{
+        display: inline-flex;
+        align-items: center;
+        height: 48px;
+        padding: 0 18px 0 8px;
+        background-color: #fff;
+        border: 2px solid $navy;
+
+        @include mq(pc){
+            display: flex;
+            width: calc(100% - 195px);
+            height: 64px;
+            padding: 0 0 0 74px;
+            margin-left: -50px;
+            border-left: none;
+            position: relative;
+            clip-path: polygon(50px 0, 100% 0, calc(100% - 50px) 100%, 0 100%);
+        }
+    }
+
+    &__date{
+        font-size: 1.4rem;
+        display: inline-block;
+
+        @include mq(pc){
+            font-size: 1.6rem;
+        }
+    }
+
+    &__tag{
+        background-color: $accent;
+        color: #fff;
+        padding: 4px 9px;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        margin-left: 8px;
+
+        @include mq(pc){
+            padding: 8px 16px;
+            margin-left: 24px;
+        }
+    }
+
+    &__news-text{
+        font-size: 1.4rem;
+        display: inline-block;
+        margin-left: 8px;
+
+        @include mq(pc){
+            font-size: 1.6rem;
+            margin-left: 24px;
+        }
+    }
+
+    &__bottom{
+        display: none;
+
+        @include mq(pc){
+            display: block;
+            width: 120px;
+            height: 64px;
+            margin-left: -50px;
+            background-color: $navy;
+            clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%);
+
+            &::before{
+                content: "";
+                width: 16px;
+                height: 1px;
+                background-color: #fff;
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                right: 32px;
+                transform: translateY(-50%);
+            }
+    
+            &::after{
+                content: "";
+                width: 4px;
+                height: 1px;
+                background-color: #fff;
+                display: inline-block;
+                position: absolute;
+                top: 46%;
+                right: 33px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

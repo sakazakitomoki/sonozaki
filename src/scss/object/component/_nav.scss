@@ -1,0 +1,56 @@
+.c-nav{
+    display: none;
+
+    &.-color-b{
+        .c-nav__item{
+            &::before{
+                background-color: $black;
+            }
+        }
+
+        .c-nav__link{
+            color: $black;
+
+            span{
+                color: $black;
+            }
+        }
+    }
+    
+    @include mq(tab-l){
+        display: flex;
+    }
+
+    &__item{
+        &:not(:first-child){
+            position: relative;
+            padding-left: 38px;
+
+            &::before{
+                content: '';
+                display: block;
+                width: 28px;
+                height: 1px;
+                position: absolute;
+                top: 11px;
+                left: 8px;
+                transform: rotate(-50deg);
+                background-color: #fff;
+            }
+        }
+    }
+
+    &__link{
+        font-size: 1.6rem;
+        color: #fff;
+
+        span{
+            font-size: 1rem;
+            display: block;
+            color: #fff;
+            text-align: center;
+            margin-top: 5px;
+            font-family: $en_font;
+        }
+    }
+}

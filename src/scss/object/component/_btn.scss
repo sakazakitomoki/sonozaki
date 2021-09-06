@@ -1,0 +1,40 @@
+.c-btn{
+    display: inline-block;
+    background-color: $main-color;
+    box-shadow: 0px 2px 4px rgba(24, 40, 72, 0.46);
+    position: relative;
+
+    span{
+        display: inline-block;
+        padding-right: 36px;
+        position: relative;
+        font-size: 1.4rem;
+
+        @include mq(tab){
+            font-size: 1.6rem;
+        }
+
+        &::before{
+            content: "";
+            width: 20px;
+            height: 1px;
+            background-color: #fff;
+            display: inline-block;
+            position: absolute;
+            top: 62%;
+            right: 0;
+        }
+
+        &::after{
+            content: "";
+            width: 6px;
+            height: 1px;
+            background-color: #fff;
+            display: inline-block;
+            position: absolute;
+            top: 44%;
+            right: 0;
+            transform: rotate(45deg);
+        }
+    }
+}
