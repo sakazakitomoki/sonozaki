@@ -1,0 +1,57 @@
+.c-section-title{
+    font-size: 3.2rem;
+    font-weight: $bold;
+    font-family: $en_font;
+
+    @include mq(tab){
+        font-size: calc(3.2rem + ((1vw - 7.68px) * 5.5556));
+        min-height: 0vw;
+    }
+
+    @include mq(pc){
+        font-size: 4.8rem;
+    }
+
+    span{
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: $medium;
+        font-family: $jp_font;
+        padding-left: 32px;
+        color: $main-color;
+        position: relative;
+
+        @include mq(tab){
+            font-size: calc(2rem + ((1vw - 7.68px) * 1.3889));
+            min-height: 0vw;
+        }
+
+        @include mq(pc){
+            font-size: 2.4rem;
+        }
+
+        &::before{
+            content: "";
+            display: block;
+            width: 23px;
+            height: 1px;
+            background-color: $main-color;
+            position: absolute;
+            bottom: 9px;
+            left: 3px;
+            transform: rotate(130deg);
+        }
+    }
+
+    &.-white{
+        color: #fff;
+
+        span{
+            color: #fff;
+
+            &::before{
+                background-color: #fff;
+            }
+        }
+    }
+}

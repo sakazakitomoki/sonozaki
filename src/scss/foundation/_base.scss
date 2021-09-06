@@ -6,6 +6,7 @@ body{
 	font-family: $jp_font;
     font-weight: $regular;
 	color: $black;
+    font-size: 1.6rem;
 }
 
 li{
@@ -13,7 +14,7 @@ li{
 }
 
 img{
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 }
 
@@ -24,4 +25,8 @@ a{
 
 a:hover{
 	opacity: 0.5;
+}
+
+address{
+    font-style: normal;
 }

@@ -1,0 +1,154 @@
+.p-recruit{
+    margin-top: 120px;
+
+    @include mq(tab-l){
+        margin-top: 160px;
+        padding: 80px 0;
+        background-color: $bg-gray;
+    }
+
+    &__title-inner{
+        padding-left: 20px;
+
+        @include mq(tab-l){
+            text-align: center;
+        }
+    }
+
+    &__wrap{
+        margin-top: 35px;
+        padding-bottom: 120px;
+        background-color: $bg-gray;
+
+        @include mq(tab-l){
+            width: 1056px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__items{
+        @include mq(tab-l){
+            display: flex;
+            justify-content: space-between;
+            margin-top: 58px;
+        }
+    }
+
+    &__item{
+        position: relative;
+
+        @include mq(tab-l){
+            width: 30.7086%;
+
+            &:nth-of-type(1){
+                transform: translateY(80px);
+            }
+
+            &:nth-of-type(2){
+                transform: translateY(40px);
+            }
+        }
+
+        img{
+            vertical-align: top;
+        }
+    }
+
+    &__sp-img{
+        @include mq(tab-l){
+            display: none;
+        }
+    }
+
+    &__pc-img{
+        display: none;
+
+        @include mq(tab-l){
+            display: block;
+        }
+    }
+
+    &__btn-inner{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        @include mq(tab-l){
+            bottom: calc(-28px);
+            left: calc(100% - 254px);
+        }
+    }
+
+    &__btn{
+        padding: 1.6rem 2.5rem;
+        display: inline-block;
+
+        @include mq(tab-l){
+            padding: 2rem 1.7rem;
+            width: 264px;
+            background-color: rgba($navy, 0.64);
+        }
+
+        span{
+            display: inline-block;
+            padding-right: 30px;
+            position: relative;
+            font-size: 1.4rem;
+
+            @include mq(tab){
+                font-size: calc(1.4rem + ((1vw - 7.68px) * 1.5152));
+            }
+
+            @include mq(tab-l){
+                font-size: 1.6rem;
+                display: block;
+            }
+    
+            &::before{
+                content: "";
+                width: 20px;
+                height: 1px;
+                background-color: #fff;
+                display: inline-block;
+                position: absolute;
+                top: 62%;
+                right: 0;
+            }
+    
+            &::after{
+                content: "";
+                width: 6px;
+                height: 1px;
+                background-color: #fff;
+                display: inline-block;
+                position: absolute;
+                top: 44%;
+                right: 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &__entry-btn-inner{
+        margin-top: 40px;
+        text-align: center;
+
+        @include mq(tab-l){
+            margin-top: 144px;
+        }
+    }
+
+    &__entry-btn{
+        padding: 1.5rem 5.2rem;
+
+        @include mq(tab-l){
+            padding: 2.5rem 4.1rem;
+        }
+    }
+}

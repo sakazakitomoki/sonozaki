@@ -32,6 +32,7 @@
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^9.0.0",
+    "postcss": "^8.3.6",
     "sass": "^1.38.0"
   },
   "browserslist": [

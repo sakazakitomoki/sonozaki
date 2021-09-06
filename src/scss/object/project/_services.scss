@@ -1,0 +1,131 @@
+.p-services{
+    margin-top: 120px;
+
+    @include mq(pc){
+        margin-top: 160px;
+    }
+
+    &__wrap{
+        position: relative;
+        overflow: hidden;
+
+        @include mq(tab-l){
+            display: flex;
+            padding-top: 40px;
+        }
+
+        &::before{
+            content: "";
+            display: block;
+            width: 90%;
+            height: 100%;
+            background-color: $bg-gray;
+            position: absolute;
+            top: 0;
+            right: 33%;
+            z-index: 1;
+            transform: skewX(-25deg);
+
+            @include mq(tab-l){
+                transform: skewX(-45deg);
+            }
+        }
+
+        &::after{
+            content: "";
+            display: block;
+            width: 63px;
+            height: 134px;
+            background-color: $bg-gray;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            clip-path: polygon(100% 0, 0 100%, 100% 100%);
+
+            @include mq(tab-l){
+                width: 175px;
+                height: 203px;
+            }
+        }
+    }
+
+    &__head{
+        position: relative;
+        z-index: 10;
+        width: 100%;
+
+        @include mq(tab-l){
+            width: 46%;
+            max-width: 620px;
+        }
+    }
+
+    &__sp-img{
+        display: block;
+
+        @include mq(tab-l){
+            display: none;
+        }
+    }
+
+    &__pc-img{
+        display: none;
+
+        @include mq(tab-l){
+            display: block;
+        }
+    }
+
+    &__body{
+        position: relative;
+        z-index: 10;
+        padding: 40px 20px 48px;
+
+        @include mq(tab-l){
+            padding: 0 20px 0px 48px;
+        }
+    }
+
+    &__inner{
+        margin-top: 30px;
+    }
+
+    &__sub-title{
+        font-size: 2.4rem;
+        font-weight: $medium;
+        line-height: (32 / 24);
+    }
+
+    &__text{
+        margin-top: 30px;
+        font-size: 1.4rem;
+        line-height: (28 / 14);
+        letter-spacing: 0.28px;
+
+        @include mq(tab-l){
+            font-size: 1.6rem;
+            line-height: (32 / 16);
+            letter-spacing: 0.32px;
+            width: 100%;
+            max-width: 512px;
+        }
+    }
+
+    &__btn-inner{
+        margin-top: 36px;
+        text-align: center;
+
+        @include mq(tab-l){
+            text-align: left;
+        }
+    }
+
+    &__btn{
+        padding: 1.4rem 4.8rem;
+
+        @include mq(tab){
+            padding: 2.4rem 4rem;
+        }
+    }
+}

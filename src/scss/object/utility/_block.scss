@@ -1,0 +1,15 @@
+.u-pc-none{
+    display: block;
+    
+    @include mq(tab){
+        display: none;
+    }
+}
+
+.u-pc-block{
+    display: none;
+
+    @include mq(pc){
+        display: block;
+    }
+}

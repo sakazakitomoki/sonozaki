@@ -1,0 +1,35 @@
+.c-loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
+    background-color: #fff;
+
+    &.is-loaded{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 250px;
+        animation: scale 1.5s 1;
+    }
+}
+    /* ローディングアニメーション */
+@keyframes scale {
+    0% {
+    transform: scale(0) translate(-50%, -50%);
+    } 
+    100% {
+    transform: scale(1.0) translate(-50%, -50%);
+    opacity: 1;
+    }
+}
