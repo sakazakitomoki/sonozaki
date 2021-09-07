@@ -407,6 +407,11 @@ address {
   background: url(../img/sp/contact-bg.jpg) no-repeat center center/cover;
   padding: 96px 0;
 }
+@media screen and (min-width: 900px) {
+  .p-contact {
+    background: url(../img/pc/background-image-contact.jpg) no-repeat center center/cover;
+  }
+}
 @media screen and (min-width: 1056px) {
   .p-contact {
     text-align: center;
