@@ -2,6 +2,10 @@
     background: url(../img/sp/contact-bg.jpg) no-repeat center center / cover;
     padding: 96px 0;
 
+    @include mq(tab-l){
+        background: url(../img/pc/background-image-contact.jpg) no-repeat center center / cover;
+    }
+
     @include mq(pc){
         text-align: center;
     }
